@@ -6,10 +6,11 @@ import { StructuredOutputParser } from "@langchain/core/output_parsers";
 // this model helps us to get the respone from Groq LLM 
 
 const model = new ChatGroq({
-  apiKey: "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", 
+  apiKey: import.meta.env.VITE_GROQ_API_KEY,
   model: "llama-3.1-8b-instant",
 });
 
+console.log(import.meta.env.VITE_OPENAI_API_KEY);
 
 // chatpromptTemplate is used to instruct llm to generate a particular response within the boundaries of the topic
 
